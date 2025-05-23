@@ -9,9 +9,9 @@ export default function Home() {
                 <div className="w-[350px] mt-[100px]">
                     <Heading>4e1l0 gAmeR!</Heading>
                     
-                    <div className="mt-[20px]">
+                    <div className="mt-[20px] flex flex-col gap-y-3">
                         <Input placeholder="i will not steal your data..  just your [SteamID]"></Input>
-                        <Button href="aaa" color='light' outline></Button>
+                        <Button href="/page2" color='light' >Request your new game</Button>
                     </div>
                 </div>
             </div>
