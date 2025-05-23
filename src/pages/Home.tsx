@@ -1,3 +1,4 @@
+import { Button } from "@/components/catalyst/button";
 import { Input } from "@/components/catalyst/input";
 import { Heading } from "@components/catalyst/heading.tsx";
 
@@ -10,6 +11,7 @@ export default function Home() {
                     
                     <div className="mt-[20px]">
                         <Input placeholder="i will not steal your data..  just your [SteamID]"></Input>
+                        <Button href="aaa" color='light' outline></Button>
                     </div>
                 </div>
             </div>
