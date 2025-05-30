@@ -19,6 +19,7 @@ export default function Slider(props: {games: {id: string,name: string,image:str
                                 backgroundImage: `url(${game.image})`,
                                 padding: '100px 0',
                                 fontSize: '30px',
+                                
                             }}>{game.name}</div>
                         })
                     }
