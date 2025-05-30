@@ -3,7 +3,7 @@ import { Input } from "@/components/catalyst/input";
 import { Heading } from "@components/catalyst/heading.tsx";
 import { useState } from "react";
 
-export default function Home() {
+export default function Login() {
     const [id, setId] = useState("");
 
     return (
@@ -22,7 +22,7 @@ export default function Home() {
                         onChange={(event) => setId(event.target.value)}
                     />
                     <Button 
-                        href={`/page2?steamid=${id}`} 
+                        href={`/home?steamid=${id}`} 
                         color="light"
                         className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-200"
                     >
