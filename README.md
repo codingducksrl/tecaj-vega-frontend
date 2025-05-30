@@ -1,3 +1,6 @@
+# Deployment
+Production server: https://steam.potep.org/
+
 # Dokumentacija
 
 ### Catalyst
