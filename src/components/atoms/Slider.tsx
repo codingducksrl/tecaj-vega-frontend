@@ -6,7 +6,7 @@ const user = {
   color: 'chartreuse',
 };
 
-export default function Slider(props: {games: {id: string,name: string,color:string}[]}) {
+export default function Slider(props: {games: {id: string,name: string,image:string}[]}) {
     return (
         <>
             <div className='w-screen' >
@@ -15,9 +15,10 @@ export default function Slider(props: {games: {id: string,name: string,color:str
                         props.games.map((game)=>{
                             return <div style={{
                                 textAlign: 'center',
-                                background: game.color,
+                                backgroundColor: 'red',
+                                backgroundImage: `url(${game.image})`,
                                 padding: '100px 0',
-                                fontSize: '30px'
+                                fontSize: '30px',
                             }}>{game.name}</div>
                         })
                     }
