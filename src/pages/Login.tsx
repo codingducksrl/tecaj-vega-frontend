@@ -15,7 +15,7 @@ export default function Home() {
   return (
       <div className="min-h-screen flex items-center justify-center w-screen bg-no-repeat bg-cover bg-[url(https://cdn.steamstatic.com/steamcommunity/public/images/items/455120/80a8b1d46bc2434a53c634de9721205228bea966.jpg)]">
     
-          <div className="absolute top-6 center-8 text-9xl font-bold text-white mt-[60px]">
+          <div className="absolute top-6 center-8 text-9xl font-bold text-white mt-[60px] ">
               Steam suggestions
           </div>
 
@@ -38,7 +38,7 @@ export default function Home() {
                            onChange={(event) => setId(event.target.value)}
                        />
                        <Button
-                           href={`/page2?steamid=${id}`}
+                           href={`/home?steamid=${id}`}
                            color="light"
                            className="w-full bg-black border border-black text-white font-semibold py-2 rounded-lg transition duration-200 hover:bg-gray-900"
                        >
@@ -59,7 +59,7 @@ export default function Home() {
                            color="light"
                            className="w-full bg-black border border-black text-white font-semibold py-2 rounded-lg transition duration-200 hover:bg-gray-900"
                        >
-                           Steam Sign In
+                           Steam Sign up
                        </Button>
 
 
