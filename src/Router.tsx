@@ -1,12 +1,12 @@
 import {Route, Routes} from "react-router";
-import Home from "@pages/Home.tsx";
-import Page2 from "@pages/Page2.tsx";
+import Login from "@/pages/Login";
+import Homepage from "@/pages/Homepage";
 
 function Router() {
     return (
         <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/page2" element={<Page2/>}/>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/home" element={<Homepage/>}/>
         </Routes>
     )
 }
