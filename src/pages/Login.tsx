@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 
-export default function Home() {
+export default function Login() {
   const [id, setId] = useState("");
 
 
