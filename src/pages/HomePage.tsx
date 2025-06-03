@@ -1,12 +1,27 @@
 import Slider from "@/components/atoms/Slider";
 import { Avatar } from '@/components/catalyst/avatar';
 import { useSearchParams } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 export default function HomePage() {
     //get id from url
-    const [searchParams, setSearchParams] = useSearchParams();
+const [searchParams, setSearchParams] = useSearchParams();
 
+const { isPending, error, data } = useQuery({
+        queryKey: ['repoData'],
+        queryFn: async () => {
+            const response = await axios.get(`http://10.0.1.7:8080/player/${searchParams.get("steamid")}`)
+            return response.data;
+        }
+    })
 
+    if (isPending) return 'Loading...'
+
+    if (error) return 'An error has occurred: ' + error.message
+
+ 
+  )
 
 
     const data = [
@@ -20,8 +35,8 @@ export default function HomePage() {
     return (
         <>
             <div className=' flex justify-end mr-[20px] mt-[20px]'>
-                {searchParams.get("steamid")}
-                <Avatar className="size-14" src={"https://avatars.steamstatic.com/1dff05a168b886479115b2d2b2aa6b2d4ae75464_full.jpg"} />
+
+            <Avatar className="size-14" src={data.slika} />
             </div>
             <div
                 className="flex w-full flex-wrap items-end justify-between gap-1 border-b border-zinc-950/10 pb-6 dark:border-white/10">
