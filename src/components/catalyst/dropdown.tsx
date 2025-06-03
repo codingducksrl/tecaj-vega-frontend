@@ -11,11 +11,15 @@ export function Dropdown(props: Headless.MenuProps) {
 }
 
 export function DropdownButton<T extends React.ElementType = typeof Button>({
+                                                                                //eslint-disable-next-line
+                                                                                //@ts-ignore
                                                                                 as = Button,
                                                                                 ...props
                                                                             }: {
     className?: string
 } & Omit<Headless.MenuButtonProps<T>, 'className'>) {
+    //eslint-disable-next-line
+    //@ts-ignore
     return <Headless.MenuButton as={as} {...props} />
 }
 
