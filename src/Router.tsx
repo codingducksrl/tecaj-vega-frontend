@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router";
 import Login from "@/pages/Login";
-import Homepage from "@/pages/Homepage";
+import Homepage from "@/pages/HomePage";
 
 function Router() {
     return (

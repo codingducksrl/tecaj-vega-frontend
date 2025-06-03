@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useSearchParams } from 'react-router';
 
-export default function Homepage() {
+export default function HomePage() {
 
 //get id from url
 const [searchParams, setSearchParams] = useSearchParams();
