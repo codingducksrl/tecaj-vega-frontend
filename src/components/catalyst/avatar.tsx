@@ -13,13 +13,13 @@ type AvatarProps = {
 }
 
 export function Avatar({
-                           src = null,
-                           square = false,
-                           initials,
-                           alt = '',
-                           className,
-                           ...props
-                       }: AvatarProps & React.ComponentPropsWithoutRef<'span'>) {
+        src = null,
+        square = false,
+        initials,
+        alt = '',
+        className,
+         ...props
+        }: AvatarProps & React.ComponentPropsWithoutRef<'span'>) {
     return (
         <span
             data-slot="avatar"
