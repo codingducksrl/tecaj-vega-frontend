@@ -6,7 +6,7 @@ const user = {
   color: 'chartreuse',
 };
 
-export default function Slider(props: {games: {id: string,name: string,image:string}[]}) {
+export default function Slider(props: {games: {id: string,name: string, descr:string, image:string}[]}) {
     return (
         <>
             <div className='w-screen' >
@@ -20,7 +20,7 @@ export default function Slider(props: {games: {id: string,name: string,image:str
                                 padding: '100px 0',
                                 fontSize: '30px',
                                 
-                            }}>{game.name}</div>
+                            }}><a href='https://store.steampowered.com/app/2767030/Marvel_Rivals/'>{game.name + game.descr}</a></div>
                         })
                     }
                     
