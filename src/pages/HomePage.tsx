@@ -33,15 +33,23 @@ export default function HomePage() {
   return (
     <>
     <div className="relative mt-[50px]">
-      <h1 className="mb-[80px] text-4xl md:text-7xl font-extrabold text-center leading-tight md:leading-[1.2] text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
-        Odkrijte svojo naslednjo igro na Steamu
-      </h1>
+
+    <h1 className="relative z-10 max-w-4xl mx-auto mt-20 text-center text-white text-6xl md:text-8xl font-extrabold tracking-tight drop-shadow-[0_0_15px_rgba(255,255,255,0.8)]">
+      Odkrij Najboljše Igre Na Steamu
+    </h1>
       
       <div className="absolute top-0 right-5">
-        <Avatar className="size-16" src={data.slika} />
+        <Avatar className="size-16 mt-[20px] mr-[30px]" src={data.slika} />
       </div>
     </div>
-
+<div className="fixed inset-0 -z-20">
+  <img
+    src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1268040/ss_2b9c6d16c8f5c47dfc3b5733efcc83b9415c2372.1920x1080.jpg?t=1667662740"
+    alt="Background"
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-black opacity-60"></div> {/* temna plast */}
+</div>
 
 
       <div
