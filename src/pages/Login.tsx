@@ -1,6 +1,7 @@
 import { Button } from "@/components/catalyst/button";
 import { Input } from "@/components/catalyst/input";
 import { Heading } from "@components/catalyst/heading.tsx";
+import axios from "axios";
 import { useState } from "react";
 
 
@@ -38,7 +39,10 @@ export default function Login() {
                            onChange={(event) => setId(event.target.value)}
                        />
                        <Button
-                           href={`/home?steamid=${id}`}
+                           onClick={async ()=>{
+                                await axios.get(`http://10.0.1.5:8080/player/${id}/refresh`)
+                                window.location.href = `/home?steamid=${id}`
+                           }}
                            color="light"
                            className="w-full bg-black border border-black text-white font-semibold py-2 rounded-lg transition duration-200 hover:bg-gray-900"
                        >
